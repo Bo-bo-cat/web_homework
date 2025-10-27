@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 45%;
+    padding: 20px;
+    background-color: lightcoral;
+    color: black;
+    box-sizing: border-box;
+}
+
+/* Стилі для першого блоку (меню) */
+.box:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* центрування по вертикалі */
+    align-items: center;     /* центрування по горизонталі */
+    text-align: left;
+}
+
+.box:first-child ul {
+    list-style: none; /* прибираємо маркери */
+    padding: 0;
+    margin: 0;
+}
+
+/* Кожен пункт меню */
+.box:first-child ol {
+    margin: 10px 0;
+}
+
+/* Посилання — прибираємо синій і підкреслення */
+.box:first-child a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* Ефект при наведенні */
+.box:first-child a:hover {
+    color: white;
+}
+
+/* Адаптація під телефон */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
